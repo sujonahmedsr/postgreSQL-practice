@@ -1,0 +1,3 @@
+SELECT now();
+
+SELECT age(CURRENT_DATE, '2002-12-11')
