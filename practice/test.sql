@@ -18,3 +18,5 @@ ALTER Table "user"
 INSERT INTO "user" 
     VALUES  
     (9, 'Rakib1',20)
+
+TRUNCATE Table "user"
