@@ -101,3 +101,14 @@ SELECT customer_id, count(*), sum(total_amount) as total_spent FROM orders
     HAVING count(order_id) > 2
 
 -- task 6: Find the total amount of orders placed each month in the year 2022;
+SELECT 
+    EXTRACT(YEAR FROM order_date) AS YEAR, 
+    SUM(total_amount) AS total_sales
+FROM orders
+WHERE EXTRACT(YEAR FROM order_date) = 2022
+GROUP BY YEAR;
+
+SELECT extract(YEAR FROM order_date) as YEAR,
+    sum(total_amount) FROM orders
+    WHERE extract(YEAR FROM order_date) = 2022
+    GROUP BY YEAR
